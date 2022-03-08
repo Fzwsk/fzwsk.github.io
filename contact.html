@@ -102,32 +102,25 @@
                     <div class="col-sm-7">
                         <h2>Send a message</h2>
 <form method="post" action="https://formspree.io/f/xayvjvnq">
-		<div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label for="name">Name:</label>
-                                      <input type="text" class="form-control" id="name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                      <label for="email">E-mail:</label>
-                                      <input type="email" class="form-control" id="email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="message">Subject:</label>
-                              <input class="form-control" id="subject"></input>
-                            </div>
-                            <div class="form-group">
-                              <label for="message">Message:</label>
-                              <textarea class="form-control form-control-comment" id="message"></textarea>
-                            </div>
-                            <div class="text-center">
-				    <ul class="actions">
-					<li><button class="btn btn-green" value="Send Message" class="primary"></button></li>
-					    <li><button class="btn btn-green" value="reset" class="primary"></button></li>
+								<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name">
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email">
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary"></li>
+										<li><input type="reset" value="Reset"></li>
+									</ul>
+								</form>
 									</ul>
 								</form>
 							</div>
