@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Linux Server Hardening</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+<section style="padding:40px; max-width:900px; margin:auto;">
+
+    <h1>Linux Server Hardening (Production Baseline)</h1>
+    <p><strong>Category:</strong> Linux</p>
+    <p><strong>Environment:</strong> RHEL / CentOS / Ubuntu</p>
+    <p><strong>Purpose:</strong> Initial security baseline before go-live</p>
+
+    <hr>
+
+    <h2>1️⃣ Update System</h2>
+    <pre><code>
+# RHEL / CentOS
+dnf update -y
+
+# Ubuntu
+apt update && apt upgrade -y
+    </code></pre>
+
+    <h2>2️⃣ Disable Root SSH Login</h2>
+    <pre><code>
+vi /etc/ssh/sshd_config
+
+PermitRootLogin no
+PasswordAuthentication no
+
+systemctl restart sshd
+    </code></pre>
+
+    <h2>3️⃣ Configure Firewall</h2>
+    <pre><code>
+# RHEL
+firewall-cmd --permanent --add-service=http
+firewall-cmd --reload
+
+# Ubuntu
+ufw allow 80
+ufw enable
+    </code></pre>
+
+    <h2>4️⃣ Fail2Ban (Optional)</h2>
+    <pre><code>
+dnf install fail2ban -y
+systemctl enable fail2ban
+systemctl start fail2ban
+    </code></pre>
+
+    <h2>5️⃣ Time Sync</h2>
+    <pre><code>
+timedatectl set-ntp true
+    </code></pre>
+
+    <hr>
+    <p><em>Last Updated: Feb 2026</em></p>
+
+</section>
+
+</body>
+</html>
