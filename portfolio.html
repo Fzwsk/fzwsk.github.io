@@ -3,139 +3,173 @@
 <head>
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Documentation | Fajar - System Administrator</title>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link href="assets/css/responsive.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f7f9fc;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.hero-clean {
+    background: #111827;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero-clean h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-clean p {
+    color: #9ca3af;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.filter-buttons .btn {
+    margin: 5px;
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+.doc-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.doc-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.doc-card a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.footer-clean {
+    background: #111827;
+    color: #9ca3af;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+</style>
 
 </head>
 
 <body>
 
-<header id="masthead" class="site-header site-header-white">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
-                    <strong>Fajar</strong> SysAdmin
-                </a>
-            </div>
+<nav class="navbar navbar-default">
+<div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><strong>Fajar</strong> SysAdmin</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="portfolio.html">Documentation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</nav>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="portfolio.html">Documentation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<div class="hero overlay subpage-hero" style="background:#1f1f1f; padding:60px 0;">
-    <div class="container text-center">
-        <h1 style="color:white;">Documentation</h1>
-        <p style="color:#ccc;">System Administration Guides & Technical Notes</p>
+<div class="hero-clean">
+    <div class="container">
+        <h1>Documentation</h1>
+        <p>System Administration Guides & Technical Notes</p>
     </div>
 </div>
 
-<main class="site-main">
-
-<section style="padding:60px 0;">
 <div class="container">
 
-<ul class="portfolio-sorting list-inline text-center">
-    <li><a href="#" class="btn btn-gray active" data-group="all">All</a></li>
-    <li><a href="#" class="btn btn-gray" data-group="linux">Linux</a></li>
-    <li><a href="#" class="btn btn-gray" data-group="moodle">Moodle</a></li>
-    <li><a href="#" class="btn btn-gray" data-group="virtualization">Virtualization</a></li>
-    <li><a href="#" class="btn btn-gray" data-group="database">Database</a></li>
-    <li><a href="#" class="btn btn-gray" data-group="automation">Automation</a></li>
-</ul>
+<div class="filter-buttons">
+    <button class="btn btn-success">All</button>
+    <button class="btn btn-default">Linux</button>
+    <button class="btn btn-default">Moodle</button>
+    <button class="btn btn-default">Virtualization</button>
+    <button class="btn btn-default">Bigdata</button>
+    <button class="btn btn-default">Automation</button>
+</div>
 
-<div id="grid" class="row">
+<div class="row">
 
-<!-- LINUX -->
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["linux"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">Linux Server Hardening</h4>
-        <a href="docs/linux/server-hardening.html">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>Linux Server Hardening</h4>
+        <a href="docs/linux/server-hardening.html">Read Documentation →</a>
     </div>
 </div>
 
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["linux"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">LVM Expansion Guide</h4>
-        <a href="#">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>LVM Expansion Guide</h4>
+        <a href="#">Read Documentation →</a>
     </div>
 </div>
 
-<!-- MOODLE -->
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["moodle"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">Moodle Installation</h4>
-        <a href="#">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>Moodle Installation</h4>
+        <a href="#">Read Documentation →</a>
     </div>
 </div>
 
-<!-- VIRTUALIZATION -->
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["virtualization"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">VM Provisioning Workflow</h4>
-        <a href="#">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>VM Provisioning Workflow</h4>
+        <a href="#">Read Documentation →</a>
     </div>
 </div>
 
-<!-- DATABASE -->
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["database"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">MySQL Backup Strategy</h4>
-        <a href="#">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>MySQL Backup Strategy</h4>
+        <a href="#">Read Documentation →</a>
     </div>
 </div>
 
-<!-- AUTOMATION -->
-<div class="col-lg-3 col-md-4 col-xs-6" data-groups='["automation"]'>
-    <div class="portfolio-item">
-        <h4 class="portfolio-item-title">Ansible Deployment</h4>
-        <a href="#">
-            <i class="fa fa-arrow-right"></i>
-        </a>
+<div class="col-md-4">
+    <div class="doc-card">
+        <h4>Ansible Deployment</h4>
+        <a href="#">Read Documentation →</a>
     </div>
 </div>
 
 </div>
-
 </div>
-</section>
 
-</main>
-
-<footer style="background:#111; padding:30px 0; color:#aaa;">
-    <div class="container text-center">
-        <p>© 2026 Fajar - System Administrator Portfolio</p>
-    </div>
-</footer>
+<div class="footer-clean">
+© 2026 Fajar - System Administrator Portfolio
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.shuffle.min.js"></script>
-<script src="assets/js/script.js"></script>
 
 </body>
 </html>
